@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.alerta{
+    padding: calc(v.$separacion / 4);
+    color: v.$blanco;
+    width: 100%;
+    display: block;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    &.error{
+        background-color: v.$rojo;
+    }
+    &.exito{
+        background-color: v.$verde;
+    }
+    &.margin-top{
+        margin-top: 1rem;
+    }
+    &.desvanecer{
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s linear 1.5s, opacity 1.5s linear;
+    }
+}
